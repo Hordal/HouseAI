@@ -1,0 +1,327 @@
+.intro-section {
+  padding: 60px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+}
+
+.intro-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+  animation: float 20s linear infinite;
+}
+
+.intro-header {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.intro-title {
+  margin-bottom: 16px;
+  font-size: 4em;
+  font-weight: 700;
+  color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.title-accent {
+  font-size: 1.2em;
+  margin: 0 15px;
+  display: inline-block;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.title-accent:first-child {
+  animation-delay: 0s;
+}
+
+.title-accent:last-child {
+  animation-delay: 1s;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.intro-subtitle {
+  font-size: 1.5em;
+  color: #667eea;
+  font-weight: 500;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.intro-desc {
+  max-width: 100%;
+  margin: 0 0 32px;
+  line-height: 1.8;
+  font-size: 1.2em;
+  color: #34495e;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.highlight-text {
+  background: linear-gradient(120deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.brand-name {
+  color: #667eea;
+  font-size: 1.3em;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  margin: 0 8px;
+}
+
+.ai-text {
+  color: #e74c3c;
+  font-weight: 600;
+  padding: 2px 8px;
+  background: rgba(231, 76, 60, 0.1);
+  border-radius: 4px;
+  font-size: 1.05em;
+}
+
+.feature-text {
+  color: #27ae60;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(39, 174, 96, 0.3);
+}
+
+.intro-features {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 1.2em;
+}
+
+.animation-container {
+  max-width: 100%;
+  margin: 64px 0;
+  padding: 0;
+}
+
+.animated-text {
+  margin: 80px 0;
+  opacity: 0;
+  transition: all 2.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.animated-text.left {
+  justify-content: flex-start;
+}
+
+.animated-text.left .chat-container {
+  justify-content: flex-start;
+}
+
+.animated-text.right {
+  justify-content: flex-end;
+}
+
+.animated-text.right .chat-container {
+  justify-content: flex-end;
+}
+
+.animated-text.visible {
+  opacity: 1;
+}
+
+.chat-bubble {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px 36px;
+  border-radius: 30px;
+  font-size: 1.65em;
+  font-weight: 500;
+  max-width: 70%;
+  position: relative;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+  animation: float 9s ease-in-out infinite;
+  display: flex;
+  align-items: flex-start; /* 중앙에서 위로 변경 */
+  min-height: 60px;
+  word-wrap: break-word;
+  line-height: 1.4;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.6s ease-out;
+  flex: 1;
+}
+
+.chat-bubble.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.typing-text {
+  opacity: 0;
+  display: inline-block;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: none;
+  text-align: left; /* 왼쪽 정렬 고정 */
+}
+
+.typing-text.typing {
+  opacity: 1;
+  animation: typing 3s steps(50, end) forwards, showFullText 0.1s ease-in-out 3s forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes showFullText {
+  to {
+    white-space: normal;
+    overflow: visible;
+    width: 100%; /* auto에서 100%로 고정 */
+  }
+}
+
+.animated-text.left .chat-bubble::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #667eea;
+}
+
+.animated-text.right .chat-bubble::before {
+  content: '';
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #764ba2;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.intro-divider {
+  margin: 32px auto 0;
+  width: 80%;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.chat-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.avatar-container {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s ease-out;
+}
+
+.avatar-container.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #667eea;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 왼쪽 말풍선 - 아바타에서 나오는 효과 */
+.animated-text.left .chat-bubble {
+  transform-origin: left center;
+}
+
+/* 오른쪽 말풍선 - 아바타에서 나오는 효과 */
+.animated-text.right .chat-bubble {
+  transform-origin: right center;
+}

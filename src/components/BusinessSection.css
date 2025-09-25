@@ -1,0 +1,27 @@
+.business-section {
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 360px;
+  width: 100%;
+  background: #444;
+}
+
+.business-title {
+  margin-bottom: 10px;
+}
+
+.business-info {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.business-btn {
+  margin-top: 10px;
+  background-color: #fff;
+  color: #444;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}

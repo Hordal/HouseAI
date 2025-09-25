@@ -1,0 +1,213 @@
+.compare-page {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.compare-container {
+  height: 100vh;
+  padding: 80px 15px 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.compare-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.compare-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.compare-header p {
+  font-size: 1rem;
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  margin: 0;
+}
+
+.compare-content {
+  display: grid;
+  grid-template-columns: 1fr 576px;
+  gap: 15px;
+  flex: 1;
+  min-height: 0;
+}
+
+.compare-left {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.compare-left .search-results-container {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.compare-left .search-results-list {
+  flex: 1;
+  overflow-y: auto;
+  height: auto;
+}
+
+.compare-left .search-results-title {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+/* Compare 페이지에서 Chatbot 컨테이너 스타일 */
+.compare-right {
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.compare-right .chatbot-container {
+  position: static !important;
+  bottom: auto !important;
+  right: auto !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  margin: 0 !important;
+  border-radius: 12px !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.compare-right .chatbot-messages {
+  height: calc(100% - 60px) !important;
+  max-height: calc(100% - 60px) !important;
+  overflow-y: auto !important;
+  flex: 1 !important;
+}
+
+.compare-right .chatbot-input-container {
+  flex-shrink: 0 !important;
+  height: 45px !important;
+}
+
+.compare-right .chatbot-toggle {
+  display: none !important;
+}
+
+/* 로딩 및 에러 상태 스타일 */
+.loading, .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.loading {
+  color: #667eea;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.login-prompt {
+  margin-top: 20px;
+}
+
+.login-prompt p {
+  margin-bottom: 15px;
+  color: #666;
+  font-size: 1rem;
+}
+
+.login-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #5a67d8;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+  .compare-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 15px;
+  }
+  
+  .compare-right {
+    height: 400px;
+    max-height: 400px;
+  }
+  
+  .compare-right .chatbot-container {
+    height: 100% !important;
+    max-height: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .compare-container {
+    padding: 80px 15px 15px;
+  }
+  
+  .compare-header h1 {
+    font-size: 2rem;
+  }
+  
+  .compare-header p {
+    font-size: 1rem;
+  }
+  
+  .compare-content {
+    height: calc(100vh - 180px);
+  }
+  
+  .compare-right {
+    height: 350px;
+    max-height: 350px;
+  }
+}

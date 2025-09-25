@@ -1,0 +1,194 @@
+/* Chatbot 컴포넌트 스타일 */
+
+/* 스크롤바 숨기기 */
+.chatbot-scroll::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* 토글 버튼 */
+.chatbot-toggle {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 90%;
+  max-width: 576px;
+  height: 24px;
+  z-index: 1002;
+  background-color: #4b5563;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.2s;
+}
+
+.chatbot-toggle:hover {
+  background-color: #374151;
+}
+
+.chatbot-toggle-bar {
+  width: 40px;
+  height: 2px;
+  background-color: white;
+  border-radius: 1px;
+}
+
+/* 챗봇 컨테이너 */
+.chatbot-container {
+  position: fixed;
+  bottom: 40px;
+  right: 16px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 576px;
+  width: 90%;
+  z-index: 1000;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 메시지 영역 */
+.chatbot-messages {
+  height: 390px;
+  overflow-y: auto;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* 메시지 컨테이너 */
+.message-container-ai {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.message-container-user {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 메시지 버블 */
+.message-bubble-ai {
+  background-color: white;
+  color: #374151;
+  padding: 12px 18px;
+  border-radius: 12px;
+  max-width: 80%;
+  font-size: 16px;
+  word-break: break-word;
+  white-space: pre-wrap;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.message-bubble-user {
+  background-color: #0f766e;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  max-width: 80%;
+  font-size: 16px;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.message-timestamp {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 6px;
+}
+
+/* 스크롤 다운 버튼 */
+.scroll-down-button {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #374151;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+}
+
+/* 입력창 영역 */
+.chatbot-input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.chatbot-input {
+  flex: 1;
+  padding: 12px 18px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+}
+
+.chatbot-send-button {
+  background-color: #0f766e;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chatbot-send-button:hover {
+  background-color: #134e4a;
+}
+
+/* 로딩 메시지 스타일 */
+.loading-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: white;
+  color: #374151;
+  padding: 12px 18px;
+  border-radius: 12px;
+  min-width: 150px;
+  max-width: 90%;
+  font-size: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+}
+
+/* 로딩 스피너 애니메이션 */
+.loading-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 50%;
+  border-top-color: #0f766e;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

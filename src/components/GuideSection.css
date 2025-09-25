@@ -1,0 +1,48 @@
+.guide-title {
+  font-size: 1.5rem;
+  margin: 16px 0 8px;
+}
+
+.guide-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  width: 360px;
+}
+
+.guide-col1 {
+  flex: 1;
+  text-align: center;
+}
+
+.guide-box1 {
+  background: #ccc;
+  height: 50px;
+  border-radius: 4px;
+}
+
+.guide-col2 {
+  flex: 2;
+  background: #ccc;
+  height: 60px;
+  border-radius: 4px;
+}
+
+.guide-bottom-box {
+  background: #ccc;
+  height: 80px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 360px;
+}
+
+.guide-play-btn {
+  background-color: #444;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+}
