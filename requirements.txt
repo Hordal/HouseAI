@@ -1,0 +1,46 @@
+# HouseAI 부동산 매물 추천 시스템 - 필수 패키지
+
+# 웹 프레임워크
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+websockets==12.0
+
+# 데이터베이스
+sqlalchemy==2.0.23
+mysql-connector-python==8.2.0
+pymongo==4.6.0
+
+# 환경 설정
+python-dotenv==1.0.0
+
+# 인증 및 보안
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+python-multipart==0.0.6
+
+# 데이터 검증
+pydantic[email]==2.5.0
+
+# AI 및 LLM 모델 (OpenAI, Claude 지원)
+openai==1.93.0
+anthropic==0.34.0
+langchain==0.3.26
+langchain-openai==0.3.27
+langchain-anthropic==0.3.27
+langchain-core==0.3.68
+
+# 데이터 처리
+numpy==1.26.2
+pandas==2.2.0
+
+# HTTP 요청
+requests==2.31.0
+
+# XML 처리
+xmltodict==0.13.0
+python-dateutil==2.8.2
+typing-extensions==4.8.0
+
+# 유틸리티
+python-dateutil==2.8.2
+typing-extensions==4.8.0
